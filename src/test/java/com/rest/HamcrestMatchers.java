@@ -18,7 +18,9 @@ public class HamcrestMatchers {
                 get("/workspaces").
                 then().log().all().assertThat().statusCode(200).
                 body("workspaces.name", contains("My Workspace","Udmey","OMPrakash","My Workspace1","My Workspace1","NareshChauhan","My Workspace1"),
-                        "workspaces.name", is(not(empty())));
+                        "workspaces.name", is(not(empty())),"workspaces.name",is(not(emptyArray())),"workspaces.name", hasSize(7),
+                        "workspaces[0]", hasKey("id"),"workspaces[0]", hasValue("My Workspace"),
+                        "workspaces[0]", hasEntry("id","e99075e2-a85c-450c-88ee-5ee839a74d17"));
 
     }
 }

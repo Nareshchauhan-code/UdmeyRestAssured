@@ -21,6 +21,5 @@ public class Automate_GetRequest_HamcrestMatchers {
                         "workspaces.type", hasItems("personal"),"workspaces[0].name",is(equalTo("My Workspace")),
                         "workspaces[1].name",equalTo("Udmey"),"workspaces.size()",equalTo(7));
 
-
     }
 }
